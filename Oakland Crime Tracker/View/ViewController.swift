@@ -32,7 +32,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         
         tableView.reloadData()
-        Networking().getOaklandData()
+       
         
     }
 

@@ -11,25 +11,29 @@ import UIKit
 
 class Networking {
     
-    let urlEndPoint = URL(fileURLWithPath: "https://data.oaklandnet.com/resource/3xav-7geq.json" )
+    
+    let token = "?$$app_token=GRa9W8LF2Kx8aUaVfTqDXYFkn"
+    let secret = "f_GBV9PorK8wW2hAJpgJuDvIowabD5Q2HpOY"
+    let endPoint = "https://data.oaklandnet.com/resource/3xav-7geq.json"
+    
     
     func getOaklandData(){
-     
+        let urlEndPoint = URL(string: "\(endPoint)\(token)")
         //URL SESSION
         let session = URLSession.shared
         
         
-        let task = session.dataTask(with: (urlEndPoint)) { (data, response, error) in
+        let task = session.dataTask(with: (urlEndPoint!)) { (data, response, error) in
             print("Start")
-            print(self.urlEndPoint)
+            print(urlEndPoint!)
             guard let unwrappedData = data else {return}
             do {
                 
                 let jsonDecoder = JSONDecoder()
-                let jsonData = try jsonDecoder.decode(Array<Oakland>.self, from: unwrappedData)
+                let jsonData = try jsonDecoder.decode(Array<[OaklandElement]>.self, from:unwrappedData)
                 
-               print(jsonData)
-             
+                print(jsonData)
+                
                 
             } catch {
                 print(error)
