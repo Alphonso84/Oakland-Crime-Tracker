@@ -8,3 +8,16 @@
 
 import Foundation
 import UIKit
+
+class Networking {
+    
+    let urlEndPoint = "https://data.oaklandnet.com/resource/3xav-7geq.json"
+    
+    func getOaklandData(){
+        
+        
+        
+    }
+    
+    
+}
