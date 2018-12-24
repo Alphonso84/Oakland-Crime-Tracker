@@ -20,10 +20,11 @@ class Networking {
     let token = "?$$app_token=GRa9W8LF2Kx8aUaVfTqDXYFkn"
     let secret = "f_GBV9PorK8wW2hAJpgJuDvIowabD5Q2HpOY"
     let endPoint = "https://data.oaklandnet.com/resource/3xav-7geq.json"
+    let sortOrder = "&$order=datetime%20DESC"
     
     
     func getOaklandData(){
-        let urlEndPoint = URL(string: "\(endPoint)\(token)")
+        let urlEndPoint = URL(string: "\(endPoint)\(token)\(sortOrder)")
         //URL SESSION
         let session = URLSession.shared
         
@@ -40,7 +41,7 @@ class Networking {
                 crimeTitle = CrimeData.map {$0.crimetype}
                 crimeAddress = CrimeData.map {$0.address}
                 crimeTime = CrimeData.map {$0.date}
-                print(crimeTitle)
+                print(crimeTime)
                 
                 
             } catch {
