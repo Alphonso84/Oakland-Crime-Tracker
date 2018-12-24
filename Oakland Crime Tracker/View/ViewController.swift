@@ -23,7 +23,8 @@ class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
         cell.textLabel?.text = crimeTitle[indexPath.row]
-        cell.detailTextLabel?.text = crimeAddress[indexPath.row]
+        cell.detailTextLabel?.text = "\(crimeAddress[indexPath.row])"
+        
         
         return cell
     }

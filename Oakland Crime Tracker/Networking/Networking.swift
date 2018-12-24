@@ -12,7 +12,8 @@ import UIKit
 
 var CrimeData = [OaklandElement]()
 var crimeTitle = [String?]()
-var crimeAddress = [String?]()
+var crimeAddress = [String]()
+var crimeTime = [String?]()
 class Networking {
     
     
@@ -38,6 +39,7 @@ class Networking {
                 CrimeData = jsonData
                 crimeTitle = CrimeData.map {$0.crimetype}
                 crimeAddress = CrimeData.map {$0.address}
+                crimeTime = CrimeData.map {$0.date}
                 print(crimeTitle)
                 
                 
