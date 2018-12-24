@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+
+var CrimeData = [OaklandElement]()
 class Networking {
     
     
@@ -30,9 +32,9 @@ class Networking {
             do {
                 
                 let jsonDecoder = JSONDecoder()
-                let jsonData = try jsonDecoder.decode(Array<[OaklandElement]>.self, from:unwrappedData)
-                
-                print(jsonData)
+                let jsonData = try jsonDecoder.decode(Array<OaklandElement>.self, from: unwrappedData)
+                CrimeData = jsonData
+                print(CrimeData)
                 
                 
             } catch {

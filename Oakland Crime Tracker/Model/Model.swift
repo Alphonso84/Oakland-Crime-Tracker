@@ -16,15 +16,12 @@ typealias Oakland = [OaklandElement]
 struct OaklandElement: Codable {
     let computedRegionW23WJfhw: String?
     let address, casenumber: String
-    let city: City
-    let crimetype: Crimetype
-    let datetime, description: String
-    let location1: Location1?
-    let location1_Address: String
-    let location1_City: City
-    let location1_State: State
+    let city: String
+    let crimetype: String
+    let date: String?
+    let description: String
     let policebeat: String?
-    let state: State
+    let state: String
     
     enum CodingKeys: String, CodingKey {
         case computedRegionW23WJfhw = "computedRegionW23WJfhw"
@@ -32,12 +29,8 @@ struct OaklandElement: Codable {
         case casenumber = "casenumber"
         case city = "city"
         case crimetype = "crimetype"
-        case datetime = "datetime"
+        case date = "datetime"
         case description = "description"
-        case location1 = "location1"
-        case location1_Address = "location1_Address"
-        case location1_City = "location1_City"
-        case location1_State = "location1_State"
         case policebeat = "policebeat"
         case state = "state"
     }
@@ -86,15 +79,6 @@ struct Crimetype: Codable {
     }
 }
 
-struct Location1: Codable {
-    let type: TypeEnum
-    let coordinates: [Double]
-    
-    enum CodingKeys: CodingKey {
-        case type
-        case coordinates
-    }
-}
 
 struct TypeEnum: Codable {
     let point: String
