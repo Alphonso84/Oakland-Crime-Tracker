@@ -11,6 +11,7 @@ import UIKit
 
 
 var CrimeData = [OaklandElement]()
+var crimeTitle = [String?]()
 class Networking {
     
     
@@ -34,7 +35,8 @@ class Networking {
                 let jsonDecoder = JSONDecoder()
                 let jsonData = try jsonDecoder.decode(Array<OaklandElement>.self, from: unwrappedData)
                 CrimeData = jsonData
-                print(CrimeData)
+                crimeTitle = CrimeData.map {$0.crimetype}
+                print(crimeTitle)
                 
                 
             } catch {
