@@ -13,6 +13,7 @@
 		89370A3621A60A34001A3D37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89370A3521A60A34001A3D37 /* Assets.xcassets */; };
 		89370A3921A60A34001A3D37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89370A3721A60A34001A3D37 /* LaunchScreen.storyboard */; };
 		8962C5AA21CA406B004C730F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8962C5A921CA406B004C730F /* Model.swift */; };
+		8962C5AC21D0F1C0004C730F /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8962C5AB21D0F1C0004C730F /* MainScreen.swift */; };
 		899DBDCB21B5521700DDA5E3 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899DBDCA21B5521700DDA5E3 /* Networking.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		89370A3821A60A34001A3D37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89370A3A21A60A34001A3D37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8962C5A921CA406B004C730F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		8962C5AB21D0F1C0004C730F /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		899DBDCA21B5521700DDA5E3 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				89370A3221A60A2F001A3D37 /* Main.storyboard */,
+				8962C5AB21D0F1C0004C730F /* MainScreen.swift */,
 				89370A3021A60A2F001A3D37 /* ViewController.swift */,
 			);
 			path = View;
@@ -167,6 +170,7 @@
 			files = (
 				899DBDCB21B5521700DDA5E3 /* Networking.swift in Sources */,
 				89370A3121A60A2F001A3D37 /* ViewController.swift in Sources */,
+				8962C5AC21D0F1C0004C730F /* MainScreen.swift in Sources */,
 				89370A2F21A60A2F001A3D37 /* AppDelegate.swift in Sources */,
 				8962C5AA21CA406B004C730F /* Model.swift in Sources */,
 			);

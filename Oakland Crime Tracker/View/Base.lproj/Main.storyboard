@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pFJ-dA-Pup">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,6 +11,44 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="wox-4H-qQS">
+            <objects>
+                <viewController id="eUM-n5-Ze1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Amc-1o-ekM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oakland Tree" translatesAutoresizingMaskIntoConstraints="NO" id="sdq-Un-XYF">
+                                <rect key="frame" x="16" y="83" width="343" height="501"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJg-FP-aHm">
+                                <rect key="frame" x="90" y="511" width="194" height="55"/>
+                                <state key="normal" title="Show Crimes"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="WMs-CR-1KW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SJg-FP-aHm" firstAttribute="leading" secondItem="vA3-H6-dgU" secondAttribute="leading" constant="90" id="2r5-9M-Y9f"/>
+                            <constraint firstItem="sdq-Un-XYF" firstAttribute="leading" secondItem="Amc-1o-ekM" secondAttribute="leadingMargin" id="3CQ-M1-NcB"/>
+                            <constraint firstItem="sdq-Un-XYF" firstAttribute="top" secondItem="vA3-H6-dgU" secondAttribute="top" constant="19" id="3YS-ya-0qf"/>
+                            <constraint firstItem="SJg-FP-aHm" firstAttribute="centerX" secondItem="sdq-Un-XYF" secondAttribute="centerX" id="AeB-z0-GK8"/>
+                            <constraint firstItem="SJg-FP-aHm" firstAttribute="centerX" secondItem="Amc-1o-ekM" secondAttribute="centerX" id="T1f-HY-2s7"/>
+                            <constraint firstItem="vA3-H6-dgU" firstAttribute="bottom" secondItem="SJg-FP-aHm" secondAttribute="bottom" constant="101" id="kBK-yO-PbH"/>
+                            <constraint firstItem="SJg-FP-aHm" firstAttribute="top" secondItem="vA3-H6-dgU" secondAttribute="top" constant="447" id="wO7-zO-CRK"/>
+                            <constraint firstItem="sdq-Un-XYF" firstAttribute="centerY" secondItem="Amc-1o-ekM" secondAttribute="centerY" id="wXg-sI-eVj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vA3-H6-dgU"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hLc-Qu-Wpo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dhJ-lt-VvS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-338.39999999999998" y="89.505247376311857"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Oakland_Crime_Tracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +57,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rrC-t7-KcG">
-                                <rect key="frame" x="16" y="20" width="343" height="627"/>
+                                <rect key="frame" x="16" y="64" width="343" height="583"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" textLabel="7gk-32-430" detailTextLabel="Ma0-Y0-54i" style="IBUITableViewCellStyleSubtitle" id="HyM-da-P6e">
@@ -68,7 +106,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-50.399999999999999" y="138.98050974512745"/>
+            <point key="canvasLocation" x="839.20000000000005" y="89.505247376311857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sfQ-IK-InV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pFJ-dA-Pup" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eK8-Fc-LWE">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eUM-n5-Ze1" kind="relationship" relationship="rootViewController" id="j6V-Da-lbF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dDf-2J-l2a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1055" y="90"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Oakland Tree" width="400" height="148"/>
+    </resources>
 </document>
