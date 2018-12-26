@@ -24,11 +24,10 @@ class Networking {
     
     
     func getOaklandData(){
+        
+        
         let urlEndPoint = URL(string: "\(endPoint)\(token)\(sortOrder)")
-        //URL SESSION
         let session = URLSession.shared
-        
-        
         let task = session.dataTask(with: (urlEndPoint!)) { (data, response, error) in
             print("Start")
             print(urlEndPoint!)
