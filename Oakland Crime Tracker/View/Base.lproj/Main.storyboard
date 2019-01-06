@@ -81,7 +81,21 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRM-6g-GwM">
+                                                    <rect key="frame" x="229" y="2" width="107" height="39.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="107" id="cxN-7A-cPG"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="NRM-6g-GwM" secondAttribute="trailing" constant="-8" id="9iH-eR-Dd7"/>
+                                                <constraint firstItem="NRM-6g-GwM" firstAttribute="centerY" secondItem="O7f-IZ-7cC" secondAttribute="centerY" id="Vqn-Fu-spQ"/>
+                                                <constraint firstItem="NRM-6g-GwM" firstAttribute="top" secondItem="O7f-IZ-7cC" secondAttribute="topMargin" constant="-9" id="n0d-3n-IPG"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
