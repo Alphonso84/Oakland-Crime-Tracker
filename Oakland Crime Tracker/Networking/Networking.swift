@@ -41,7 +41,7 @@ class Networking {
                 crimeAddress = CrimeData.map {$0.address}
                 crimeTime = CrimeData.map {$0.date}
                 print(crimeTime)
-                
+                print(crimeAddress)
                 
             } catch {
                 print(error)
