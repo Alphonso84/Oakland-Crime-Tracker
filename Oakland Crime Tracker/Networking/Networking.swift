@@ -10,10 +10,9 @@ import Foundation
 import UIKit
 
 
-var CrimeData = [OaklandElement]()
 var crimeTitle = [String?]()
 var crimeAddress = [String]()
-//var crimeTime = [String?]()
+var crimeTime = [String?]()
 var policeBeat = [String?]()
 class Networking {
     
@@ -36,16 +35,14 @@ class Networking {
             do {
                 
                 let jsonDecoder = JSONDecoder()
-                let jsonData = try jsonDecoder.decode(Array<OaklandElement>.self, from: unwrappedData)
-                CrimeData = jsonData
-                crimeTitle = CrimeData.map {$0.crimetype}
-                crimeAddress = CrimeData.map {$0.address}
+                let jsonData = try jsonDecoder.decode(Oakland.self, from: unwrappedData)
+                crimeTitle = jsonData.map {$0.crimetype}
+                crimeAddress = jsonData.map {$0.address}
+                crimeTime = jsonData.map {$0.date}
+                policeBeat = jsonData.map {$0.policebeat}
+                print(jsonData)
                 
-                if let crimeTime = CrimeData?.map {$0.date}
-                policeBeat = CrimeData.map {$0.policebeat}
-                print(crimeTime)
-                print(crimeAddress)
-                print(policeBeat)
+                
                 
             } catch {
                 print(error)

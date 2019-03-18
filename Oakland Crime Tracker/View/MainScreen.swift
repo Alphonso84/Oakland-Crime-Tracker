@@ -18,9 +18,9 @@ class MainScreen: UIViewController {
     
     override func viewDidLoad() {
        
-        if CrimeData .isEmpty == false {
-            print("CrimeData has data")
-        }
+//        if CrimeData .isEmpty == false {
+//            print("CrimeData has data")
+//        }
     }
     
     
