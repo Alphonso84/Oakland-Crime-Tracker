@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-var crimeTitle = [String?]()
+var crimeTitle:[String?] = [""]
 var crimeAddress = [String]()
 var crimeTime = [String?]()
 var policeBeat = [String?]()
@@ -24,8 +24,7 @@ class Networking {
     
     
     func getOaklandData(){
-        
-        
+    
         let urlEndPoint = URL(string: "\(endPoint)\(token)\(sortOrder)")
         let session = URLSession.shared
         let task = session.dataTask(with: (urlEndPoint!)) { (data, response, error) in
@@ -38,11 +37,9 @@ class Networking {
                 let jsonData = try jsonDecoder.decode(Oakland.self, from: unwrappedData)
                 crimeTitle = jsonData.map {$0.crimetype}
                 crimeAddress = jsonData.map {$0.address}
-                crimeTime = jsonData.map {$0.date}
+                crimeTime = jsonData.map {$0.datetime}
                 policeBeat = jsonData.map {$0.policebeat}
                 print(jsonData)
-                
-                
                 
             } catch {
                 print(error)

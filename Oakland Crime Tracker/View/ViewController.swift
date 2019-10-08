@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,14 +22,19 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! CrimeTableViewCell
-        cell.titleLabel.text = crimeTitle[indexPath.row]
+       
+        cell.titleLabel!.text = crimeTitle[indexPath.row]
         cell.subtitleLabel.text = "\(crimeAddress[indexPath.row])"
-        cell.timeLabel!.text = "\(crimeTime)"
+        cell.timeLabel.text = crimeTime[indexPath.row]
         
         
         return cell
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let scrollLocation = tableView.contentOffset.y
+        print(scrollLocation)
+    }
     override func viewWillAppear(_ animated: Bool) {
            
             
